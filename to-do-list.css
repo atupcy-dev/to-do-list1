@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    font-family: Impact, serif;
+    margin-bottom: -10px;
+    margin-top: 40px;
+}
+
+li {
+    background-color: skyblue;
+}
+
+.todo-list {
+    background: white;
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    /* main shadow */
+    width: 320px;
+    position: relative;
+}
+
+/* creates the "sheet" under the list */
+.todo-list::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: -10px;
+    bottom: -10px;
+    background: #fff;
+    border-radius: 15px;
+    z-index: -1;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+
+.todo-list li {
+    margin: 15px 0;
+    background: #e9f7ef;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+a {
+    color: #0077cc;
+    /* default link color */
+    text-decoration: none;
+    /* remove underline */
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+/* visited links */
+a:visited {
+    color: #5a2ca0;
+    /* after visited */
+}
+
+/* focus state */
+a:focus {
+    outline: 2px solid #ff9900;
+    /* visible focus outline */
+    outline-offset: 2px;
+}
+
+/* active (clicked) state */
+a:active {
+    color: #cc0000;
+    /* red */
+}
+
+/* hover state */
+a:hover {
+    color: #009933;
+    /* green when hovered */
+}
